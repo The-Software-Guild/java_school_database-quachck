@@ -48,7 +48,7 @@ public class SchoolDaoImpl implements SchoolDao {
 		// YOUR CODE STARTS HERE
 
 		String sql = "SELECT course.courseCode, course.courseDesc " + "FROM course "
-				+ "JOIN teacher ON course.teacherId = teacher.teacherId " + "WHERE teacher.dept = 'Computer Science'";
+				+ "JOIN teacher ON course.teacherId = teacher.tid " + "WHERE teacher.dept = 'Computer Science'";
 
 		// YOUR CODE ENDS HERE
 		return jdbcTemplate.query(sql, new CourseMapper());
