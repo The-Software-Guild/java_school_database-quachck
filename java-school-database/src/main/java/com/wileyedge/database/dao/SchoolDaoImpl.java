@@ -145,4 +145,5 @@ public class SchoolDaoImpl implements SchoolDao {
 				+ "where course_id = 1;";
 		return jdbcTemplate.query(sql, new StudentMapper());
 	}
+	
 }
